@@ -22,7 +22,7 @@ function MYMODULE_my_custom_form(&$form_state) {
   // Go through each of its custom fields and add them to our form.
   foreach ($type['fields'] as $field_name => $field) {
     // If we wanted a specific field, we'd filter it here, by name:
-    // if ($field_name == 'field_article_public') { }
+    // if ($field_name == 'field_article_my_custom_field') { }
     // But for this example we're going to add them all.
     $form['#field_info'][$field['field_name']] = $field;
     $form += (array) content_field_form($form, $form_state, $field);
@@ -37,7 +37,6 @@ function MYMODULE_my_custom_form(&$form_state) {
 function MYMODULE_my_custom_form_submit(&$form, &$form_state) {
   // Submitted values for the CCK fields arrive here successfully and 
   // from what I've tested they even get validated accordingly by 
-  // their "parent modules" (the CCK modules which define their 
-  // functionality).
+  // their "parent modules" (the CCK modules which define them).
   //var_dump($form_state['values']);
 }
