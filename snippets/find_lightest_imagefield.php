@@ -19,6 +19,6 @@ foreach ($content_types as $content_type_name) {
 }
 /** Hypothetical Usage:
  * $node = load_some_node_i_want();
- * $node->$lightest_imagefields[$node->type]; // Accessing the lightest imagefield of this node's content type.
+ * $node->$lightest_imagefields[$node->type]; // Access this node's lightest imagefield.
  */
 
