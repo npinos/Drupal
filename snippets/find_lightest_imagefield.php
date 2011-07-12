@@ -4,7 +4,7 @@
  * @see: http://stackoverflow.com/questions/6656595
  */
 module_load_include('inc', 'content', 'includes/content.node_form');
-$content_types = array('page', 'story', 'product', 'whatever_content_type_you_have');
+$content_types = array('page', 'story', 'product', 'some_content_type');
 
 $imagefields_per_content_type = array();
 foreach ($content_types as $content_type_name) {
@@ -17,7 +17,8 @@ foreach ($content_types as $content_type_name) {
     }
   }
 }
-//...Test by loading some node and getting its lightest imagefield.
-var_dump(
-  $some_node->$imagefields_per_content_type['whatever_content_type_you_have']
-);
+/** Example Usage:
+ * $node = load_some_node_i_want();
+ * $node->$imagefields_per_content_type[$node->type]; // Accessing the lightest imagefield.
+ */
+
